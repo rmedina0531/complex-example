@@ -10,9 +10,9 @@ scripts:
 
 after_success:
   - docker build -t rmedina0531/multi-client ./client
-  - docker built -t rmedina0531/multi-nginx ./nginx
-  - docker built -t rmedina0531/multi-server ./server
-  - docker built -t rmedina0531/multi-worker ./worker
+  - docker build -t rmedina0531/multi-nginx ./nginx
+  - docker build -t rmedina0531/multi-server ./server
+  - docker build -t rmedina0531/multi-worker ./worker
 
   - echo "$DOCKER_PASS" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push rmedina0531/multi-client
